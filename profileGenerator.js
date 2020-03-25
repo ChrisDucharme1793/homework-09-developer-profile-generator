@@ -62,7 +62,7 @@ class DoHomework {
     }
 
     async createHtml() {
-       await  writeFileAsync('profile.html',`
+       await  writeFileAsync('index.html',`
         <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -129,7 +129,7 @@ class DoHomework {
 
     async createPdf(){
         const html5ToPDF = new HTML5ToPDF({
-            inputPath: path.join('./', "profile.html"),
+            inputPath: path.join('./', "index.html"),
             outputPath: path.join('./', "profile.pdf"),
             templatePath: path.join('./', "templates", "htmlbootstrap"),
             include: [
